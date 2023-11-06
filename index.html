@@ -1,0 +1,68 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numera</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <div id="title">
+                    <h1>Numera</h1>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="logoContainer">
+                    <div class="hashtag">
+                        0
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <button id="exportButton">PDF</button>
+            <button onclick="exportAsMP3()" id="exportButtonMP3">MP3</button>
+            <section>
+                <label for="birthdate">Fecha de nacimiento:</label>
+                <div>
+                    <input type="date" id="birthdate">
+                    <button onclick="generateMatrix()">Matrices</button>
+                </div>
+                <div id="matrixContainer"></div>
+            </section>
+            <section class="name-container">
+                <label for="amplitude">Edad:</label>
+                <input type="number" id="amplitude" step="1">
+                <div id="graphButtons">
+                    <!-- <button onclick="updateGraph()" id="toGraphButton">Grafica</button> -->
+                    <button onclick="toggleAnimation()" id="toggleButton">Graficas</button>
+                    <button onclick="createAudioContext()" id="playSound">Sonido</button>
+                </div>
+                <div id="graphContainer">
+                    <canvas id="graph"></canvas>
+                    <div id="graphNatural"></div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="logoFooter">
+                <h4>Numera</h4>
+                <div class="hashtagFooter">
+                    0
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@1.1.1"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lamejs/1.2.1/lame.all.js" integrity="sha512-eY0XAD05WDpCg58PUncWwvJhUwwcI92cg/knfPtH4wCf9uhglHEQZT6WwDmqyhdNQJ0pGrHz0nD/9vjHwVw6tA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/recorderjs/0.1.0/recorder.js" integrity="sha512-zSq4Vvm00k8M01OLF/SmwKryVpA7YVXIbEFHU1rvNw3pgH50SjL6O4nDbB65V76YKWmr3rPABOXJ+uz+Z3BEmw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+
+
+
+</body></html>
